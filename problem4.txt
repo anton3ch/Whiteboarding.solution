@@ -1,0 +1,34 @@
+determines if all elements in a string are unique
+no converting or sorting
+return a bool
+input: “hello”
+output: false
+input: “copyright”
+output: true
+
+
+function isUnique(string) { // hello
+	// take a letter and iterate it through each other letter and see if they match
+	//if match return false
+	//if don;t match return true
+	let specialArr = [“!”, “@”, ..] // if we need to exclude special characters
+	for(let i = 0; i < string.length){ //input[2] “l”
+		for(let j = i + 1; j < string.length; j++) {  input[3] “l”
+		if(!specialArr.includes(string[i]));	 {
+			if(string[i] === string[j]) return false;
+			}
+		}
+	}
+	return true;
+}
+
+
+//clean version:
+function isUnique(str) {
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i + 1; j < str.length; j++) {
+      if (str[i] === str[j]) return false;
+    }
+  }
+  return true;
+};
